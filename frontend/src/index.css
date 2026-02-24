@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #1d4ed8;
+}
+
+body {
+  @apply antialiased text-slate-900 bg-slate-50;
+  font-family: 'Inter', sans-serif;
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
